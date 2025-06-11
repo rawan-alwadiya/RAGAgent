@@ -19,20 +19,20 @@ The system leverages **Mistral-7B-Instruct** for multi-turn dialogue, **Chroma**
 
 ## **Key Capabilities**
 
-### **🧠 Multi-Turn Conversational Assistant**
+### **Multi-Turn Conversational Assistant**
 - Maintains dialogue history using `ConversationBufferMemory`
 - Responds to complex queries while preserving context across turns
 
-### **🔍 Live Web Search + Document Chunking**
+### **Live Web Search + Document Chunking**
 - Utilizes `duckduckgo_search` for up-to-date source discovery
 - Extracts webpage content via `WebBaseLoader`
 - Splits text into manageable chunks using `RecursiveCharacterTextSplitter`
 
-### **🔐 Semantic Retrieval via Embeddings**
+### **Semantic Retrieval via Embeddings**
 - Converts text chunks to vector embeddings with `all-MiniLM-L6-v2`
 - Persists the vectors in a local `Chroma` vector database for retrieval
 
-### **🛠️ Tool-Augmented Reasoning**
+### **Tool-Augmented Reasoning**
 - Registers a custom retriever tool using LangChain's `Tool()` interface
 - Enables the agent to search relevant chunks dynamically during inference
 
